@@ -62,3 +62,40 @@ Com a VM em execução, o acesso foi feito via SSH:
 
 ```bash
 ssh azureuser@<ip_público_da_vm>
+````
+
+#### Criação do DataBase 
+
+### 2. Informações Básicas
+
+Preenchi os seguintes campos:
+
+- **Assinatura**: Free Tier
+- **Grupo de Recursos**: `RG-FreeTier`
+- **Nome do Banco de Dados**: `bd-projeto-vm`
+- **Servidor SQL**: Criei um novo chamado `sql-server-projeto`
+  - Nome único do servidor
+  - Região: mesma da máquina virtual
+  - Login: `adminuser`
+  - Senha: definida com segurança
+
+---
+
+### 3. Camada de Preço
+
+- Selecionei a opção **"Basic"** ou equivalente à camada gratuita.
+- Esta opção é suficiente para testes, estudos e pequenos projetos.
+
+---
+
+### 4. Configuração de Rede (Firewall)
+
+Após a criação, acessei o servidor SQL e:
+
+- Cliquei em **"Firewalls e redes virtuais"**
+- Adicionei meu IP público com o botão **"Adicionar meu IP atual"**
+- Ativei a opção **"Permitir serviços do Azure a acessar o servidor"**
+- Salvei as alterações
+
+
+Logo apos, mostrou o quanto custaria esse serviço...
